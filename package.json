@@ -1,0 +1,33 @@
+{
+  "name": "dominikhaid-next",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime":"7.12.5",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-watch": "^7.0.0",
+    "autoprefix": "1.0.1",
+    "postcss":"8.1.14",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "prettier-eslint-cli": "^5.0.0"
+  }, 
+  "eslintConfig": {
+    "globals": {
+      "window": true,
+      "browser": true
+    }
+  }
+}
