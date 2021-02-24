@@ -1,9 +1,15 @@
 {
   "presets": [
     [
-      "react",
+      "next/babel",
       {
-        "runtime": "automatic"
+        "preset-env": {},
+        "preset-react": {"runtime": "automatic"},
+        "class-properties": {},
+        "transform-runtime": {},
+        "experimental-modern-preset": {},
+        "styled-jsx": {},
+        "preset-typescript": {}
       }
     ]
   ],
