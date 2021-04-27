@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import AppRouter from './routers/AppRouter';
+import './css/global.css';
 import reportWebVitals from './reportWebVitals';
 import {AppProvider, AppContext} from './context/AppState';
 
@@ -9,7 +10,7 @@ ReactDOM.render(
     <AppProvider>
       <AppContext.Consumer>
         {appState => {
-          return <p>Hello World !</p>;
+          return <AppRouter {...appState} />;
         }}
       </AppContext.Consumer>
     </AppProvider>
