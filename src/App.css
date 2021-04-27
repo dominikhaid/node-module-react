@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nerko+One&display=swap');
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --size-large: 800px;
+  --size-medium: 650px;
+  --size-small: 350px;
+
+  --primary: 217, 196, 169;
+  --secondary: 49, 101, 245;
+  --neutral: 49, 101, 245;
+
+  --opacity: 0.5;
+  --opacity-light: 0.1;
+  --opacity-mid: 0.3;
+
+  --box-shadow: 0 0 20px;
+  --box-shadow-mid: 0 0 50px;
+  --box-shadow-big: 0 0 100px;
+}

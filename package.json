@@ -1,17 +1,23 @@
 {
-  "name": "dominikhaid-next",
+  "name": "dominikhaid-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "babel-plugin-inline-react-svg": "^2.0.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "postcss": "^8",
     "postcss-cli": "^8.3.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",
+    "react-scripts": "4.0.1",
     "react-uuid": "^1.0.2",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.3",
+    "web-vitals": "^0.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -24,7 +30,6 @@
     "@fullhuman/postcss-purgecss": "^4.0.2",
     "autoprefixer": "^10.2.4",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -43,10 +48,29 @@
     "prettier": "^2.0.5",
     "prettier-eslint-cli": "^5.0.0"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "format": "prettier --config .prettierrc.json \"{,!(node_modules)/**/}src/**/*.{js,jsx}\" --write",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
-    "globals": {
-      "window": true,
-      "browser": true
-    }
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
