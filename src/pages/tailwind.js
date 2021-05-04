@@ -114,7 +114,10 @@ function Stylesheet() {
         id="text"
         className="flex flex-wrap items-center justify-center bg-secondary-light p-4xl"
       >
-        <h1 className="flex-none col-span-4 text-center uppercase p-md mt-6xl w-100">
+        <h1
+          data-testid="text-head"
+          className="flex-none col-span-4 text-center uppercase p-md mt-6xl w-100"
+        >
           Text
         </h1>
         <article className="prose prose-lg p-lg">
@@ -361,9 +364,14 @@ function Stylesheet() {
         <section className="p-4xl">
           <h2 className="text-center uppercase p-md">Buttons</h2>
           <div className="items-center justify-center spaced">
-            <button className="btn-primray">Button</button>
+            <button data-testid="btn-primary" className="btn-primray">
+              Button
+            </button>
             <button className="btn-secondary">Button</button>
             <button className="btn-success">Button</button>
+            <button disabled data-testid="btn-disabled" className="btn-primary">
+              Button
+            </button>
           </div>
         </section>
       </section>
