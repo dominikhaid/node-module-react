@@ -21,3 +21,8 @@ This module is developed to extend our base server. It can be easily installed w
 > npm run plugin p=https://github.com/dominikhaid/node-module-react-tools.git
 > 
 > npm run dev
+
+### Usefull Links
+
+- [Playground](https://testing-playground.com/)
+- [JestDocs](https://jestjs.io/docs/expect)

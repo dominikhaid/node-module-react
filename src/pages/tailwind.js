@@ -36,6 +36,7 @@ function Stylesheet() {
       {/**
        * COLORS
        * */}
+      <h1>Tailwind Stylesheet</h1>
       <section
         id="colors"
         className="items-center grid-cols-4 md:grid lg:grid xl:grid bg-gray-lightest gap-lg p-4xl sm:grid-flow-col-dense"
