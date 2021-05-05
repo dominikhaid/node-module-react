@@ -1,36 +1,51 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "react",
+    "import",
+    "prettier"
+  ],
   "extends": [
     "eslint:recommended",
-    "react-app",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "plugin:prettier/recommended",
-    "prettier/react"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "alias": {
         "map": [
           ["components", "./src/components"],
           ["lib", "./src/lib"],
           ["src", "./src/"],
           ["public", "./public"],
-          ["data","./src/data"],
-          ["context","./src/context"],
-          ["hooks","./src/hooks"],
-          ["routers","./src/routers"],
-          ["reducers","./src/reducers"],
-          ["includes","./src/includes"]
-
+          ["data", "./src/data"],
+          ["context", "./src/context"],
+          ["hooks", "./src/hooks"],
+          ["routers", "./src/routers"],
+          ["reducers", "./src/reducers"],
+          ["includes", "./src/includes"]
         ],
-        "extensions": [".ts", ".js", ".jsx", ".json",".css",".less",".scss"]
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx",
+          ".json",
+          ".css",
+          ".less",
+          ".scss"
+        ]
       }
+    },
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
   },
-  "plugins": ["react", "import", "prettier", "jsx-a11y"],
-  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -45,31 +60,27 @@
     "jest": true
   },
   "rules": {
-    "no-console": 1,
-    "linebreak-style": ["error", "unix"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "jsx-a11y/no-onchange": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/destructuring-assignment": [
-      2,
-      "always",
-      { "ignoreClassFields": true }
-    ],
-    "react/static-property-placement": [1, "static public field"],
-    "react/state-in-constructor": [1, "never"],
-    "react/sort-comp": [
-      2,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
       {
-        "order": [
-          "static-methods",
-          "static-variables",
-          "instance-variables",
-          "lifecycle",
-          "everything-else",
-          "render"
-        ]
+        "ts": "never",
+        "js": "never",
+        "jsx": "never",
+        "tsx": "never"
       }
-    ]
+    ],
+    "no-console": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-filename-extension": ["warn", {"extensions": [".tsx"]}],
+    "linebreak-style": ["error", "unix"]
   },
   "globals": {
     "window": true,

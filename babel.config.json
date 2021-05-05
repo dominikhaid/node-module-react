@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "next/babel",
+      "@babel/preset-react",
       {
         "preset-env": {},
         "preset-react": {"runtime": "automatic"},
@@ -13,5 +13,6 @@
       }
     ]
   ],
+  "ignore": ["public/icons", "public/images", "node_modules"],
   "plugins": ["@babel/plugin-transform-runtime"]
 }
