@@ -1,10 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Tailwind from '../pages/Tailwind';
-import PropTypes, { InferProps } from "prop-types";
+import PropTypes, {InferProps} from 'prop-types';
 
-
-export default function AppRouter({name,setName}:InferProps<typeof AppRouter.propTypes>):React.ReactElement {
+export default function AppRouter({
+  name,
+  setName,
+}: InferProps<typeof AppRouter.propTypes>): React.ReactElement {
   return (
     <Router>
       <div>
@@ -19,13 +21,13 @@ export default function AppRouter({name,setName}:InferProps<typeof AppRouter.pro
         <hr />
         <Switch>
           <Route exact path="/">
-            <p>Hello World !</p>
+            <Tailwind />
           </Route>
           <Route path="/tailwind">
             <Tailwind />
           </Route>
         </Switch>
-        <button onClick={()=>setName('new')}>{name}</button>
+        <button onClick={() => setName('new')}>{name}</button>
       </div>
     </Router>
   );
@@ -33,5 +35,5 @@ export default function AppRouter({name,setName}:InferProps<typeof AppRouter.pro
 
 AppRouter.propTypes = {
   name: PropTypes.string,
-  setName: PropTypes.any
+  setName: PropTypes.any,
 };
