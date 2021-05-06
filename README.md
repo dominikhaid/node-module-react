@@ -50,8 +50,4 @@ JSDoc generates a documentation from your functions and converts it to HTML. Thi
 
 - [Playground](https://testing-playground.com/)
 - [JestDocs](https://jestjs.io/docs/expect)
-
-### TODO 
-
-[ ] React about react types
-[ ] Read some more ts best practices for reeact and include here
+- [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
