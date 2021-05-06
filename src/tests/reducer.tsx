@@ -1,8 +1,17 @@
+
+interface actionType {
+  type:string
+}
+
+type initialStateType = {
+  count: number
+};
+
 export const initialState = {
   count: 0,
 };
 
-export function reducer(state = initialState, action) {
+export function reducer(state:initialStateType, action:actionType):initialStateType {
   switch (action.type) {
     case 'INCREMENT':
       return {

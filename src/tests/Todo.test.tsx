@@ -1,10 +1,11 @@
+import React from 'react'
 import {ToDo} from './Todo';
 import {render} from '@testing-library/react';
 
 type ComponentProps = React.ComponentProps<typeof ToDo>;
 
 const baseProps: ComponentProps = {
-  onClick: () => {},
+  onClick: () => true,
   id: 1,
 };
 
@@ -18,17 +19,14 @@ function renderUI(props: Partial<ComponentProps> = {}) {
   };
 }
 
+
 it('fetches a todo', () => {
-  const {
-    /* selectors */
-  } = renderUI({onClick: () => {}, id: 1});
+   renderUI({onClick: () => true, id: 1});
   // rest of the test
 });
 
 it('fetches a todo', () => {
-  const {
-    /* selectors */
-  } = renderUI({onClick: () => {}, id: 420});
+renderUI({onClick: () => true, id: 420});
   // rest of the test
 });
 

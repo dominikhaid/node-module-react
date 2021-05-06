@@ -1,7 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const TestRedux = ({counter, dispatch}) => {
+type CountState = {
+  count: number;
+};
+
+interface ICounterState {
+  count: number;
+}
+
+const CounterState: ICounterState = {
+  count: 0,
+};
+
+const TestRedux = (counter = CounterState, dispatch) => {
   const increment = () => dispatch({type: 'INCREMENT'});
   const decrement = () => dispatch({type: 'DECREMENT'});
 
@@ -18,4 +30,6 @@ const TestRedux = ({counter, dispatch}) => {
   );
 };
 
-export default connect(state => ({counter: state.count}))(TestRedux);
+export default connect((state: CountState) => ({counter: state.count}))(
+  TestRedux,
+);

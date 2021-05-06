@@ -1,7 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 
-const TestAxios = ({url}) => {
+type TestAxiosProp = {
+  url: string;
+};
+
+const TestAxios = ({url}: TestAxiosProp): React.ReactElement => {
   const [data, setData] = React.useState();
 
   const fetchData = async () => {

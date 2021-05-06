@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "types": [
+      "node",
+      "jest",
+      "cypress",
+      "@testing-library/jest-dom",
+      "@types/testing-library__jest-dom"
     ],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "strictFunctionTypes": true,
     "sourceMap": true,
     "listFiles": true,
     "allowJs": true,
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,10 +28,7 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    ".",
-    "src"
-  ],
+  "include": ["cypress", "src"],
   "exclude": [
     "node_modules",
     "__screenshots__",
@@ -37,10 +38,11 @@
     ".git",
     "out",
     "static",
-    "stroybook-static",
-    "build",
     "coverage",
     "dist",
-    "lib"
+    "jest",
+    "cypress",
+    "stroybook-static",
+    "build"
   ]
 }

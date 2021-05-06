@@ -21,8 +21,6 @@ For further explanation visit [Cypress](https://www.cypress.io/).
 
 Testing framework for react based on jest.
 
-
-
 - [docs](https://testing-library.com/docs/react-testing-library/intro/)
 - [playground](https://testing-playground.com/)
 
@@ -30,8 +28,9 @@ Testing framework for react based on jest.
 ## TailwindCss
 
 
+## JSDoc 
 
-## JSDoc
+JSDoc generates a documentation from your functions and converts it to HTML. This setup uses better-docs, so it's optimized for react. But it can be also used to any other JavaScript project.
 
 
 
@@ -44,11 +43,15 @@ Testing framework for react based on jest.
 > 
 > cd my-app
 > 
-> npm run plugin p=https://github.com/dominikhaid/node-module-react-tools.git
 > 
-> npm run dev
+> npm run start
 
 ### Usefull Links
 
 - [Playground](https://testing-playground.com/)
 - [JestDocs](https://jestjs.io/docs/expect)
+
+### TODO 
+
+[ ] React about react types
+[ ] Read some more ts best practices for reeact and include here

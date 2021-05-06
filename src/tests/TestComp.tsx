@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const TestEvents = () => {
+const TestEvents = (): React.ReactElement => {
   const [counter, setCounter] = React.useState(0);
 
   const delayCount = () =>

@@ -17,7 +17,7 @@ type State = {
   todo: Todo | undefined;
 };
 
-export function ToDo({id, onClick}: Props) {
+export function ToDo({id, onClick}: Props):React.ReactElement {
   const [state, setState] = React.useState<State>({
     fetchState: 'loading',
     todo: undefined,

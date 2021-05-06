@@ -9,3 +9,6 @@ public/icons
 cypress/plugins
 cypress/support
 **/reportWebVitals.ts
+**/tailwind/*.*js
+**/*.config.js
+**/reportWebVitals.js

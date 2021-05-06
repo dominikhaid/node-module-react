@@ -5,12 +5,15 @@ const About = () => <h1>About page</h1>;
 
 const Home = () => <h1>Home page</h1>;
 
+type useParam = {
+  name:string
+}
 const Contact = () => {
-  const {name} = useParams();
+  const {name} = useParams<useParam>();
   return <h1 data-testid="contact-name">{name}</h1>;
 };
 
-const TestRouter = () => {
+const TestRouter = ():React.ReactElement => {
   const name = 'John Doe';
   return (
     <>

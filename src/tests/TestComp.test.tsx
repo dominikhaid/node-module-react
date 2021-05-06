@@ -12,7 +12,7 @@ it('should take a snapshot', () => {
 
 it('should equal to 0', () => {
   const {getByTestId} = render(<TestComp />);
-  expect(getByTestId('counter')).toHaveTextContent(0);
+  expect(getByTestId('counter')).toHaveTextContent('0');
 });
 
 it('should be enabled', () => {

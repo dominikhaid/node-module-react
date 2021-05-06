@@ -2,7 +2,7 @@ import React from 'react';
 import {render, cleanup, fireEvent} from '@testing-library/react';
 import CounterProvider, {CounterContext, Counter} from './TestContext';
 
-const renderWithContext = component => {
+const renderWithContext = (component:React.ReactNode) => {
   return {
     ...render(
       <CounterProvider value={CounterContext}>{component}</CounterProvider>,

@@ -4,7 +4,7 @@ import {render, fireEvent} from '@testing-library/react';
 import {createMemoryHistory} from 'history';
 import TestRouter from './TestRouter';
 
-const renderWithRouter = component => {
+const renderWithRouter = (component:React.ReactNode) => {
   const history = createMemoryHistory();
   return {
     ...render(<Router history={history}>{component}</Router>),

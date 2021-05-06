@@ -1,6 +1,15 @@
 import React from 'react';
 
-function Stylesheet() {
+/**
+ * Component for showing TailwindCSS Styles
+ *
+ * @component
+ * @example
+ * return (
+ *   <Tailwind  />
+ * )
+ */
+function Tailwind(): React.ReactElement {
   return (
     <>
       {/**
@@ -481,4 +490,4 @@ function Stylesheet() {
   );
 }
 
-export default Stylesheet;
+export default Tailwind;

@@ -2,15 +2,20 @@ import React from 'react';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {render, cleanup, fireEvent} from '@testing-library/react';
-import {initialState, reducer} from './reducer';
+import {initialState as initVal, reducer} from './reducer';
 import TestRedux from './TestRedux';
 
 const renderWithRedux = (
-  component,
-  {initialState, store = createStore(reducer, initialState)} = {},
+  component: React.ReactNode,
+  {initialState = initVal, store = createStore(reducer)} = {},
 ) => {
   return {
-    ...render(<Provider store={store}>{component}</Provider>),
+    ...render(
+      <Provider store={store}>
+        {component}
+        <p>{initialState}</p>
+      </Provider>,
+    ),
     store,
   };
 };
@@ -18,7 +23,7 @@ const renderWithRedux = (
 afterEach(cleanup);
 
 it('checks initial state is equal to 0', () => {
-  const {getByTestId} = renderWithRedux(<TestRedux />);
+  const {getByTestId} = renderWithRedux(<TestRedux />, {initialState: initVal});
   expect(getByTestId('counter')).toHaveTextContent('0');
 });
 
