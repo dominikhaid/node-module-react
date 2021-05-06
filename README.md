@@ -51,3 +51,5 @@ JSDoc generates a documentation from your functions and converts it to HTML. Thi
 - [Playground](https://testing-playground.com/)
 - [JestDocs](https://jestjs.io/docs/expect)
 - [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [cheatsheet](https://react-typescript-cheatsheet.netlify.app)
+- [react-ts](https://fettblog.eu/typescript-react)
